@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="survey-form">
+        <h2>Encuesta de Satisfacción</h2>
+        
+        <section>
+            <h3>Información Personal</h3>
+            <label>Nombre: <input type="text" name="nombre" required></label>
+            <label>Correo Electrónico: <input type="email" name="email" required></label>
+            <label>Teléfono: <input type="tel" name="telefono" required></label>
+        </section>
+        
+        <section>
+            <h3>Experiencia de Compra</h3>
+            <label>Producto Comprado: <input type="text" name="producto" required></label>
+            <label>Calificación de la Compra:<label> (1 es "Muy malo" y 10 "Excelente") </label> <input type="number" id="calificacion" name="calificacion" min="1" max="10"></label>
+            <label>Comentarios: <textarea name="comentarios"></textarea></label>
+            <label>Fecha de Compra: <input type="datetime-local" id="fecha_compra" name="fecha_compra"></label>
+            <label>Archivo de Recibo: <input type="file" name="recibo"></label>
+        </section>
+        
+        <section>
+            <h3>Satisfacción General</h3>
+            <label>Fecha de Nacimiento: <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"></label>
+            <label>Zodiaco: <select id="zodiaco" name="zodiaco">
+                <option value="Aries">Aries</option>
+                <option value="Tauro">Tauro</option>
+                <option value="Géminis">Géminis</option>
+                <option value="Cáncer">Cáncer</option>
+                <option value="Leo">Leo</option>
+                <option value="Virgo">Virgo</option>
+                <option value="Libra">Libra</option>
+                <option value="Escorpio">Escorpio</option>
+                <option value="Sagitario">Sagitario</option>
+                <option value="Capricornio">Capricormio</option>
+                <option value="Acuario">Acuario</option>
+                <option value="Piscis">Piscis</option>
+                
+            </select></label>
+            
+            <label>Color Favorito: <input type="color" id="color" name="color"></label>
+            <label>¿Recomendarías nuestro producto a un amigo? 
+              <div class="recomienda">
+                <label>
+                    <input type="radio" name="recomienda" value="si"> Sí
+                </label>
+                <label>
+                    <input type="radio" name="recomienda" value="no"> No
+                </label>    
+                </div>
+            </label>
+            <label>¿Cómo calificarías nuestro servicio al cliente?
+                <select id="calificacion_servicio" name="calificacion_servicio">
+                    <option value="excelente">Excelente</option>
+                    <option value="bueno">Bueno</option>
+                    <option value="regular">Regular</option>
+                    <option value="malo">Malo</option>
+                </select>
+            </label>
+            <label>¿Qué mejorarías en nuestra tienda? <textarea  name="mejoras"></textarea></label>
+            <label>¿Qué características valoras más en un producto? 
+             <div class="caracteristicas">
+                <label>
+                    <input type="checkbox" name="caracteristicas" value="calidad"> Calidad
+                </label>
+                <label>
+                    <input type="checkbox" name="caracteristicas" value="precio"> Precio            
+                </label>
+                <label>
+                    <input type="checkbox" name="caracteristicas" value="diseño"> Diseño
+                </label>
+               <label>
+                    <input type="checkbox" name="caracteristicas" value="funcionalidad"> Funcionalidad
+               </label> 
+               <label>     
+               <input type="checkbox" name="caracteristicas" value="marca"> Marca
+               </label>
+            </div>
+            </label>
+        </section>
+        
+        <section>
+            <h3>Preferencias</h3>
+            <label>¿Qué rango horario prefieres que te contactemos?
+                <input type="time" id="hora_inicio" name="hora_inicio"> <input type="time" id="hora_fin" name="hora_fin">
+            </label>
+            <label>¿Qué métodos de pago prefieres?
+                <input type="checkbox" name="metodo_pago" value="tarjeta"> Tarjeta de crédito
+                <input type="checkbox" name="metodo_pago" value="paypal"> PayPal
+                <input type="checkbox" name="metodo_pago" value="transferencia"> Transferencia bancaria
+                <input type="checkbox" name="metodo_pago" value="efectivo"> Efectivo
+            </label>
+            <label>¿Con qué frecuencia compras en nuestra tienda?
+                <select id="frecuencia_compra" id="frecuencia_compra" name="frecuencia_compra">
+                    <option value="diario">Diariamente</option>
+                    <option value="semanal">Semanalmente</option>
+                    <option value="mensual">Mensualmente</option>
+                    <option value="rara vez">Rara vez</option>
+                </select>
+            </label>
+        </section>
+        
+        <button type="submit">Enviar Encuesta</button>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
