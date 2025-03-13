@@ -108,6 +108,9 @@
             <label>¿Qué rango horario prefieres que te contactemos?
                 <input type="time" id="hora_inicio" name="hora_inicio" required> 
                 <input type="time" id="hora_fin" name="hora_fin" required>
+                <div id="horaError" style="color: red; display: none; margin-top: 10px;">
+                    La hora de inicio debe ser menor que la hora de fin.
+                </div>
             </label>
             <label>¿Qué métodos de pago prefieres?
                 <input type="checkbox" name="metodo_pago" value="tarjeta" > Tarjeta de crédito

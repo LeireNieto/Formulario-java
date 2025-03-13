@@ -45,16 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-// Cargar los datos guardados
-function loadData() {
-    const inputs = document.querySelectorAll("input, select, textarea");
-    inputs.forEach(input => {
-        const savedValue = localStorage.getItem(input.name);
-        if (savedValue) {
-            input.value = savedValue;
-        }
-    });
-}
+
 
     // Validar los campos obligatorios de la sección actual
     function validateCurrentSection(section) {
