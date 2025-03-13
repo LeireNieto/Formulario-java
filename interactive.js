@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     let currentSection = 1;
 
+
+
+
+
     // Validación del correo electrónico
     function validateEmail() {
         const email = document.getElementById("email");
@@ -41,19 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-   /* // Cargar los datos guardados
-    function loadData() {
-        const inputs = document.querySelectorAll("input, select, textarea");
-        inputs.forEach(input => {
-            const savedValue = localStorage.getItem(input.name);
-            if (savedValue) {
-                input.value = savedValue;
-            }
-        });
-    }*/
+// Cargar los datos guardados
+function loadData() {
+    const inputs = document.querySelectorAll("input, select, textarea");
+    inputs.forEach(input => {
+        const savedValue = localStorage.getItem(input.name);
+        if (savedValue) {
+            input.value = savedValue;
+        }
+    });
+}
 
     // Validar los campos obligatorios de la sección actual
-function validateCurrentSection(section) {
+    function validateCurrentSection(section) {
     let allValid = true;
     const inputs = document.querySelectorAll(`#section-${section} input[required], #section-${section} select[required], #section-${section} textarea[required]`);
 
@@ -94,7 +98,7 @@ function validateCurrentSection(section) {
     });
 
     return allValid; // Retorna si todos los campos son válidos
-}
+}   
 
 
 
@@ -135,14 +139,21 @@ function validateCurrentSection(section) {
         document.getElementById(`section-${section - 1}`).style.display = "block";
         currentSection--;
     };
+    
+// Validar y mostrar mensaje de agradecimiento al finalizar la encuesta
+document.getElementById("survey-form").addEventListener("submit", function (event) {
+    if (validateEmail() && validatePhone() && validateCurrentSection(currentSection)) {
+        alert("¡Gracias por completar la encuesta!");
+        // Aquí puedes agregar lógica adicional si deseas enviar los datos a un servidor
+    } else {
+        alert("Por favor, corrige los errores antes de enviar.");
+        event.preventDefault(); // Evitar el envío del formulario si hay errores
+    }
+});
 
-    // Validar antes de enviar el formulario
-    document.getElementById("survey-form").addEventListener("submit", function (event) {
-        if (!validateEmail() || !validatePhone() || !validateCurrentSection(currentSection)) {
-            event.preventDefault();
-            alert("Por favor, corrige los errores antes de enviar.");
-        }
-    });
+    
 
     loadData();
 });
+
+
