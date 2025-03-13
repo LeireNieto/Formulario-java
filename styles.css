@@ -1,38 +1,51 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
-    display: flex; /* Usamos flexbox para alinear el contenido */
-    justify-content: center; /* Centra horizontalmente */
-
+    margin: 0px;
+    padding: 0px;
+    background-image: url('https://previews.123rf.com/images/gudkovandrey/gudkovandrey1611/gudkovandrey161102706/66350972-la-cola-de-la-ballena-jorobada-madagascar-isla-de-santa-mar%C3%ADa.jpg'); /* Cambia esto por la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center;
+    background-attachment: fixed; /* Fija la imagen para que no se desplace */
+    backdrop-filter: blur(1px); /* Efecto difuminado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima para asegurar que el contenido no quede cortado */
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    max-width: 100%; /* Evita que se contraiga */
 }
 
+.container {
+    width: 95%; /* Puedes ajustar este valor para hacerlo más ancho */
+    max-width: 1800px; /* Controla el ancho máximo */
+    display: flex;
+    justify-content: center;
+}
+
+
 form {
-    background: white;
+    background: rgba(55, 64, 187, 0.9); /* Fondo blanco semitransparente */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: auto;
-    width: 40%;
-    display: block;
-} 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra adaptable */
+    max-width: 550px; /* Máximo ancho */
+    
+}
 
 h2 {
-    color: rgb(228, 24, 34);
+    color: rgb(23, 34, 128);
 }
 
 h3 {
-    color: #333;
+    color: #70a9d8;
 }
 
 label {
     display: block;
     margin: 10px 0;
     margin-bottom: 5px;
+    color: rgb(134, 206, 235);
 }
 
 input, select, textarea {
@@ -41,13 +54,14 @@ input, select, textarea {
     margin-top: 15px;
     margin-bottom: 20px;
     display: block;
-    border: 1px solid #ccc;
+    border: 1px solid #0919aa;
     border-radius: 4px;
 }
 
 .caracteristicas label {
-    display: block; /* Hace que cada casilla de verificación ocupe una línea */
+    display: inline; /* Hace que cada casilla de verificación ocupe una línea */
     margin-bottom: 8px; /* Espacio entre las opciones */
+    color: #cfd6eb;
 }
 
 input[type="checkbox"] {
@@ -57,9 +71,10 @@ input[type="checkbox"] {
 }
 
  .recomienda label {
-    display: block; /* Hace que cada casilla de verificación ocupe una línea */
+    display: inline; /* Hace que cada casilla de verificación ocupe una línea */
     margin-bottom: 8px; /* Espacio entre las opciones */
 }
+
 input[type="radio"] {
     width: unset; /* Quita el ancho fijo de los radio buttons */
     display: inline-block; /* Hace que los radio buttons se muestren en línea */
@@ -85,9 +100,9 @@ input[type="radio"] {
 
 
 button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
+    background-color: #70a7f0;
+    color: rgb(21, 75, 175);
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -98,7 +113,15 @@ button {
     margin-right: auto;
 }
 
+.botones {
+    display: flex;
+    justify-content: space-between; /* Acomoda los botones con espacio entre ellos */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    max-width: 500px; /* Limita el ancho si es necesario */
+    margin-top: 20px; /* Ajusta el margen superior si es necesario */
+}
+
 button:hover {
-    background-color: #ce3711;
+    background-color: #86afc2;
 }   
 

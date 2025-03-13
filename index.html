@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="survey-form" action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
-        <h2>Encuesta de Satisfacción</h2>
+        <h2>ENCUENTA DE SATISFACCIÓN</h2>
         <div class="section" id="section-1">
             <h3>Información Personal</h3>
             <label>Nombre: <input type="text" name="nombre" required></label>
@@ -30,8 +30,11 @@
             <label>Comentarios: <textarea name="comentarios" required></textarea></label>
             <label>Fecha de Compra: <input type="datetime-local" id="fecha_compra" name="fecha_compra" required></label>
             <label>Archivo de Recibo: <input type="file" name="recibo" required></label>
+         
+            <div class="botones">
             <button type="button" onclick="prevSection(2)">Atrás</button>
             <button type="button" onclick="nextSection(2)">Siguiente</button>
+            </div>
         </div>
 
         <div class="section" id="section-3" style="display: none;">
@@ -94,8 +97,10 @@
                </label>
             </div>
             </label>
+            <div class="botones">
             <button type="button" onclick="prevSection(3)">Atrás</button>
             <button type="button" onclick="nextSection(3)">Siguiente</button>
+            </div>
         </div>
 
         <div class="section" id="section-4" style="display: none;">
@@ -121,9 +126,10 @@
                     <option value="rara vez">Rara vez</option>
                 </select>
             </label>
+            <div class="botones">
             <button type="button" onclick="prevSection(4)">Atrás</button>
             <button type="submit">Enviar Encuesta</button>
-        </div>
+                   </div>
     </form>
     
     <script src="interactive.js"></script>
