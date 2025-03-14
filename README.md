@@ -15,4 +15,9 @@
 - César ha estado investigando pseudaclase invalid y lo ha puesto en común con el grupo.
 - Hemos vuelto a mirar el Css para darle la apariencia definitiva que queríamos que tuviese.
 
-
+14/03/2025  
+- Hemos solucionado los ultimos errores de java scrip que teniamos en nombre
+- Hemos cambiado alguna cosa del diseño, como se mostraba los errores
+- Nos hemos repartido la presentación
+- Cada uno se ha preparado su parte, preguntando dudas a los compañeros.
+- Presentación del trabajo realizado

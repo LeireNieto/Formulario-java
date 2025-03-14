@@ -25,7 +25,7 @@ body {
 
 
 form {
-    background: rgba(55, 64, 187, 0.9); /* Fondo blanco semitransparente */
+    background: rgba(117, 120, 172, 0.9); /* Fondo blanco semitransparente */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra adaptable */
@@ -125,3 +125,9 @@ button:hover {
     background-color: #86afc2;
 }   
 
+.error-message , #nameError, #emailError, #phoneError, #dateError, #timeError, #colorError, #calificacionError, #recomiendaError, #comentarioError {
+    color: red;
+    background-color: white; /* Fondo blanco */
+    padding: 2px 5px; /* Espaciado interno */
+    display: inline-block; /* Para que no se extienda */
+}
