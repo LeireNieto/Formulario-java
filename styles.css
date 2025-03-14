@@ -61,7 +61,7 @@ input, select, textarea {
 .caracteristicas label {
     display: inline; /* Hace que cada casilla de verificación ocupe una línea */
     margin-bottom: 8px; /* Espacio entre las opciones */
-    color: #cfd6eb;
+    color: black;
 }
 
 input[type="checkbox"] {
@@ -87,7 +87,7 @@ input[type="radio"] {
     width: 7%;
 }
 
-#fecha_compra, #fecha_nacimiento, #zodiaco, #calificacion_servicio, #frecuencia_compra, #color_favorito {
+#fecha_compra, #fecha_nacimiento, #zodiaco, #calificacion_servicio, #frecuencia_compra, #color_favorito, #calificacion, #color {
     width: 55%;
 }
 
@@ -132,4 +132,9 @@ button:hover {
     background-color: white; /* Fondo blanco */
     padding: 2px 5px; /* Espaciado interno */
     display: inline-block; /* Para que no se extienda */
+}
+
+ #nameError, #emailError, #telefonoError{
+    color: red; 
+    display: none;
 }

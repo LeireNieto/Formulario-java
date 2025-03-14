@@ -11,16 +11,17 @@
         <h2>ENCUESTA DE SATISFACCIÓN</h2>
         <div class="section" id="section-1">
             <h3>Información Personal</h3>
-            <label>Nombre: <input type="text" id="name" name="nombre" required></label>
-            <span id="nameError" style="color: red; display: none;">Escribe tu nombre.</span>
+            <label>Nombre: <input type="text" id="name" name="nombre" required>
+            <span id="nameError" >Escribe tu nombre.</span>
+        </label>
             <label>Correo Electrónico: 
                 <input type="email" name="email" id="email" placeholder="correo@email.com" required>
-                <span id="emailError" style="color: red; display: none;">Escribe un correo válido correo@email.com.</span>
+                <span id="emailError">Escribe un correo válido correo@email.com.</span>
             </label>
             <label>Teléfono: 
                 <input type="tel" name="telefono" id="telefono" required>
                 <span id="numberCount">Has escrito 0 números.</span>
-                <span id="telefonoError" style="color: red; display: none;">Solo 9 números permitidos.</span>
+                <span id="telefonoError" >Solo 9 números permitidos.</span>
             </label>
             <button type="button" onclick="nextSection(1)">Siguiente</button>
         </div>
