@@ -88,7 +88,7 @@ input[type="radio"] {
 }
 
 #fecha_compra, #fecha_nacimiento, #zodiaco, #calificacion_servicio, #frecuencia_compra, #color_favorito {
-    width: 50%;
+    width: 55%;
 }
 
 #hora_inicio, #hora_fin {
