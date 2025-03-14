@@ -16,7 +16,7 @@
 - Hemos vuelto a mirar el Css para darle la apariencia definitiva que queríamos que tuviese.
 
 14/03/2025  
-- Hemos solucionado los ultimos errores de java scrip que teniamos en nombre
+- Hemos solucionado los ultimos errores de java scrip que teniamos en nombre, no aparecía el error al principio (id html).
 - Hemos cambiado alguna cosa del diseño, como se mostraba los errores
 - Nos hemos repartido la presentación
 - Cada uno se ha preparado su parte, preguntando dudas a los compañeros.
