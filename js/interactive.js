@@ -133,7 +133,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Función para pasar a la siguiente sección
     window.nextSection = function (section) {
         // Validación para los campos de la sección actual
-        if (section === 1 && (!validateName() || !validateEmail() || !validatePhone())) return;
+        if (section === 1) {
+            if (!validateName()) return;
+            if (!validateEmail() || !validatePhone()) return;
+        }
+        
         if (!validateCurrentSection(section)) return;
 
         // Ocultar la sección actual y mostrar la siguiente
@@ -142,7 +146,10 @@ document.addEventListener("DOMContentLoaded", function () {
         saveData();
         currentSection++;
     };
-
+    // Escuchar cambios en el campo del nombre para eliminar errores en tiempo real
+    document.getElementById("name").addEventListener("input", function () {
+        validateName();
+    });
     // Función para volver a la sección anterior
     window.prevSection = function (section) {
         document.getElementById(`section-${section}`).style.display = "none";
@@ -152,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Validar y mostrar mensaje de agradecimiento al finalizar la encuesta
     document.getElementById("survey-form").addEventListener("submit", function (event) {
-        if (validateName() &&validateEmail() && validatePhone() && validateCurrentSection(currentSection)) {
+        if (validateName() && validateEmail() && validatePhone() && validateCurrentSection(currentSection)) {
             alert("¡Gracias por completar la encuesta!");
             // Aquí puedes agregar lógica adicional si deseas enviar los datos a un servidor
         } else {
